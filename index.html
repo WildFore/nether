@@ -7,14 +7,19 @@
     <title>Nether Calculator</title>
 </head>
 <body>
-    <h1 class = "title">Nether Calculator by <h1 class="name">WildFore</h1></h1>
+    <header class="headf">
+        <h1 class = "title">Nether Calculator by</h1>
+            <button class="name" id = "me">WildFore</button>
+        </h1>
+    </header>
     <div class = "Window">
         <li class="list">
-            <ul class = "xxx">X<div class = "xunder"></div><input class = "x" id = "xIn" maxlength="16"></input></ul>
-            <ul>Y<div class = "yunder"></div><input class = "y" id = "yIn" maxlength="16"></input></ul>
-            <ul class = "zzz">Z<div class = "zunder"></div><input class = "z" id = "zIn" maxlength="16"></input></ul>
+            <ul class = "xxx">X<input class = "x" id = "xIn" maxlength="24"><div class = "xunder"></div></input></ul>
+            <ul>Y<div class = "yunder"></div><input class = "y" id = "yIn" maxlength="24"></input></ul>
+            <ul class = "zzz">Z<div class = "zunder"></div><input class = "z" id = "zIn" maxlength="24"></input></ul>
         </li>      
         <button class = "Submit", id = "submit">CALCULATE</button>  
+        <button class = "Ask", id = "ask">?</button>  
     </div>
     <script>
         document.getElementById("submit").onclick = function()
@@ -29,6 +34,14 @@
             navigator.clipboard.writeText(resultVar);
             alert("Copied to Clipboard");
         }
+        document.getElementById("ask").onclick = function()
+        {
+            alert("This calculator simply gives you nether coordinates to build a portal to come out on exact coordinates you type in.");
+        }
+        document.getElementById("me").onclick = function()
+        {
+            alert("Discord: bettercallsanya#0650");
+        }
     </script>
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
@@ -37,16 +50,26 @@
         background-color: rgb(44, 44, 44);
         color: white;
         font-family: 'Poppins', sans-serif;
+        margin: 0px 0px 0px 0px;
+    }
+    .headf 
+    {
+        background-color: rgb(31, 31, 31);
+        height: 4.4em;
     }
     .title 
     {
+        margin-top: 0px;
+        padding-top: 5px;
         margin-left: 10px;
         font-size: 20px;
+        margin-bottom: 0px;
+
     }
     .Window 
     {
         flex-direction: column-reverse;
-        margin-top: 14vw;
+        margin-top: 10vw;
         display: flex;
         justify-items: center;
         align-content: center;
@@ -91,22 +114,25 @@
     .Submit 
     {
         position: relative;
-        top:11.1em;
-        left: 11.6em;
-        width: 8em;
+        top:11em;
+        left: 3.5em;
+        width: 16em;
         height: 2.5em;
-        border-radius: 0.6em;
+        border-radius: 0em 0.6em 0.6em 0em;
         border: none;
         font-family: 'Poppins', sans-serif;
-        background-color: rgb(0, 255, 170);
-        transition: box-shadow 0.5s, background-color 0.5s;
+        background-color: rgb(44, 44, 44);
+        transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
         font-size: 20px;
-        color: rgb(44, 44, 44);
+        color: white;
+        border: 1px solid white;
     }
     .Submit:hover
     {
         box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
         background-color: rgb(252, 213, 40);
+        border: none;
+        color: rgb(44, 44, 44);
     }
     .x:focus, .y:focus, .z:focus
     {
@@ -121,7 +147,11 @@
         color: rgb(252, 213, 40);
         margin-left: 10px;
         font-size: 20px;
-        margin-top: -15px;
+        padding-top: -10px;
+        background-color: rgba(0, 0, 0, 0);
+        border:none;
+        font-family: 'Poppins', sans-serif;
+        padding: 0px;
     }
     .xunder 
     {
@@ -129,7 +159,7 @@
         position: absolute;
         width: 3em;
         height: 1.85em;
-        top:-0.21em;
+        top:-0.24em;
         z-index: -1;
         border-radius: 0.6em 0em 0em 0.6em;
         left:1.1em;
@@ -140,7 +170,7 @@
         position: absolute;
         width: 3em;
         height: 1.85em;
-        top:-0.22em;
+        top:-0.24em;
         z-index: -1;
         border-radius: 0.6em 0em 0em 0.6em;
         left:1.1em;
@@ -155,6 +185,28 @@
         z-index: -1;
         border-radius: 0.6em 0em 0em 0.6em;
         left:1.1em;
+    }
+    .Ask
+    {
+        position: relative;
+        top:13.5em;
+        left: 2em;
+        width: 1.9em;
+        height: 2.5em;
+        border-radius: 0.6em 0em 0em 0.6em;
+        border: none;
+        font-family: 'Poppins', sans-serif;
+        background-color: rgb(252, 213, 40);
+        transition: box-shadow 0.5s, background-color 0.5s;
+        font-size: 20px;
+        color: rgb(44, 44, 44);
+        transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
+    }
+    .Ask:hover 
+    {
+        background-color: rgb(0, 140, 255);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
+        color: white;
     }
     </style>    
 </body>
