@@ -10,9 +10,9 @@
     <h1 class = "title">Nether Calculator by <h1 class="name">WildFore</h1></h1>
     <div class = "Window">
         <li class="list">
-            <ul>X<input class = "x" id = "xIn" maxlength="16"></input></ul>
-            <ul>Y<input class = "y" id = "yIn" maxlength="16"></input></ul>
-            <ul>Z<input class = "z" id = "zIn" maxlength="16"></input></ul>
+            <ul>X<div class = "xunder"></div><input class = "x" id = "xIn" maxlength="16"></input></ul>
+            <ul>Y<div class = "yunder"></div><input class = "y" id = "yIn" maxlength="16"></input></ul>
+            <ul>Z<div class = "zunder"></div><input class = "z" id = "zIn" maxlength="16"></input></ul>
         </li>      
         <button class = "Submit", id = "submit">CALCULATE</button>  
     </div>
@@ -34,7 +34,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
     body 
     {
-        background-color: rgb(61, 61, 61);
+        background-color: rgb(44, 44, 44);
         color: white;
         font-family: 'Poppins', sans-serif;
     }
@@ -45,14 +45,14 @@
     }
     .Window 
     {
-        margin-top: 15vw;
+        flex-direction: column-reverse;
+        margin-top: 14vw;
         display: flex;
         justify-items: center;
         align-content: center;
         flex-wrap: wrap;
         justify-content: center;
         text-align: center;
-        
     }
     .list 
     {
@@ -64,9 +64,9 @@
         margin-top: -20px;
         margin-left: 10px;
         padding: 0.2em;
-        border-radius: 0.6em;
+        border-radius:0em 0.6em 0.6em 0em;
         position: relative;
-        top:-5px;
+        top:-3px;
         width: 15em;
         border: none;
         outline: none;
@@ -75,11 +75,13 @@
         font-size: 20px;
         height: 2em;
         padding-left: 0.5em;
+        color: rgb(44, 44, 44);
     }
     .xx, .yy, .zz 
     {
         position: relative;
         top:100px;
+        background-color: aqua;
     }
     ul 
     {
@@ -89,35 +91,70 @@
     .Submit 
     {
         position: relative;
-        top:8.5em;
-        left: -8.6em;
+        top:11em;
+        left: 11.6em;
         width: 8em;
         height: 2.5em;
         border-radius: 0.6em;
         border: none;
         font-family: 'Poppins', sans-serif;
         background-color: rgb(0, 255, 170);
-        transition: box-shadow 0.5s;
+        transition: box-shadow 0.5s, background-color 0.5s;
         font-size: 20px;
+        color: rgb(44, 44, 44);
     }
     .Submit:hover
     {
-        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.349);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
+        background-color: rgb(252, 213, 40);
     }
     .x:focus, .y:focus, .z:focus
     {
-        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.349);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
     }
     .x:hover, .y:hover, .z:hover
     {
-        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.349);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
     }
     .name
     {
-        color: rgb(0, 255, 170);
+        color: rgb(252, 213, 40);
         margin-left: 10px;
         font-size: 20px;
         margin-top: -15px;
+    }
+    .xunder 
+    {
+        background-color: rgb(204, 82, 45);
+        position: absolute;
+        width: 3em;
+        height: 1.85em;
+        top:-0.22em;
+        z-index: -1;
+        border-radius: 0.6em 0em 0em 0.6em;
+        left:1.1em;
+    }
+    .yunder 
+    {
+        background-color: rgb(63, 184, 109);
+        position: absolute;
+        width: 3em;
+        height: 1.85em;
+        top:-0.24em;
+        z-index: -1;
+        border-radius: 0.6em 0em 0em 0.6em;
+        left:1.1em;
+    }
+    .zunder 
+    {
+        background-color: rgb(60, 89, 182);
+        position: absolute;
+        width: 3em;
+        height: 1.85em;
+        top:-0.22em;
+        z-index: -1;
+        border-radius: 0.6em 0em 0em 0.6em;
+        left:1.1em;
     }
     </style>    
 </body>
