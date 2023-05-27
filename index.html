@@ -13,11 +13,11 @@
     </header>
     <div class = "Window">
         <li class="list">
-            <ul class = "xxx">X<input class = "x" id = "xIn" maxlength="24"><div class = "xunder"></div></input></ul>
-            <ul>Y<div class = "yunder"></div><input class = "y" id = "yIn" maxlength="24"></input></ul>
-            <ul class = "zzz">Z<div class = "zunder"></div><input class = "z" id = "zIn" maxlength="24"></input></ul>
+            <ul class = "xxx"><input class = "x" id = "xIn" maxlength="24" placeholder="X:"></input></ul>
+            <ul><input class = "y" id = "yIn" maxlength="24" placeholder="Y:"></input></ul>
+            <ul class = "zzz"><input class = "z" id = "zIn" maxlength="24" placeholder="Z:"></input></ul>
         </li>      
-        <button class = "Submit", id = "submit">CALCULATE</button>  
+        <button class = "Submit", id = "submit">Calculate</button>  
         <button class = "Ask", id = "ask">?</button>  
     </div>
     <script>
@@ -90,12 +90,12 @@
     .x, .y, .z
     {
         margin-top: -20px;
-        margin-left: 10px;
+        margin-left: -10px;
         padding: 0.2em;
-        border-radius:0em 0.6em 0.6em 0em;
+        border-radius:0.6em;
         position: relative;
         top:-3px;
-        width: 15em;
+        width: 16.8em;
         border: none;
         outline: none;
         font-family: 'Poppins', sans-serif;
@@ -103,6 +103,26 @@
         font-size: 20px;
         height: 2em;
         padding-left: 0.5em;
+        color: rgb(44, 44, 44);  
+        transition: color 0.5s, background-color 0.5s;    
+    }
+    .x {
+        background-color: rgb(253, 87, 87);
+        
+    }
+    .y {
+        background-color: rgb(60, 215, 143);
+    }
+    .z {
+        background-color: rgb(103, 103, 245);
+    }
+    .z::placeholder {
+        color: rgb(44, 44, 44);
+    }
+    .y::placeholder {
+        color: rgb(44, 44, 44);
+    }
+    .x::placeholder {
         color: rgb(44, 44, 44);
     }
     .xx, .yy, .zz 
@@ -126,25 +146,17 @@
         border-radius: 0em 0.6em 0.6em 0em;
         border: none;
         font-family: 'Poppins', sans-serif;
-        background-color: rgb(66, 66, 66);
+        background-color: rgba(66, 66, 66, 0.291);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.224);
         transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
         font-size: 20px;
         color: white;
     }
     .Submit:hover
     {
-        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
         background-color: rgb(252, 213, 40);
         border: none;
         color: rgb(44, 44, 44);
-    }
-    .x:focus, .y:focus, .z:focus
-    {
-        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
-    }
-    .x:hover, .y:hover, .z:hover
-    {
-        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
     }
     .name
     {
@@ -156,39 +168,6 @@
         padding: 0px;
         opacity: 100;
         z-index: 1;
-    }
-    .xunder 
-    {
-        background-color: rgb(221, 87, 46);
-        position: absolute;
-        width: 3em;
-        height: 1.85em;
-        top:-0.24em;
-        z-index: -1;
-        border-radius: 0.6em 0em 0em 0.6em;
-        left:1.1em;
-    }
-    .yunder 
-    {
-        background-color: rgb(48, 180, 98);
-        position: absolute;
-        width: 3em;
-        height: 1.85em;
-        top:-0.24em;
-        z-index: -1;
-        border-radius: 0.6em 0em 0em 0.6em;
-        left:1.1em;
-    }
-    .zunder 
-    {
-        background-color: rgb(47, 77, 177);
-        position: absolute;
-        width: 3em;
-        height: 1.85em;
-        top:-0.22em;
-        z-index: -1;
-        border-radius: 0.6em 0em 0em 0.6em;
-        left:1.1em;
     }
     .Ask
     {
@@ -208,8 +187,7 @@
     }
     .Ask:hover 
     {
-        background-color: rgb(0, 140, 255);
-        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.548);
+        background-color: rgb(255, 85, 0);
         color: white;
     }
     .blur
