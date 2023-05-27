@@ -31,8 +31,8 @@
             var zRes = z / 8; 
             var resultVar = Math.round(xRes).toString() + " " +  Math.round(yRes).toString() + " " + Math.round(zRes).toString();
             navigator.clipboard.writeText(resultVar);   
-            document.getElementById("bgclr").style.backgroundColor = "rgb(48, 180, 98)";
-            document.getElementById("Title").innerHTML = "Copied to Clipboard!";
+            document.getElementById("submit").style.backgroundColor = "rgb(48, 180, 98)";
+            document.getElementById("submit").innerHTML = "Copied to Clipboard!";
             setTimeout(timeout, 1500)
             if (x == 24 && y == "02" & z == 2022)
             {
@@ -40,8 +40,9 @@
             }
         }
         function timeout (){
-            document.getElementById("bgclr").style.backgroundColor = "rgb(44, 44, 44)";
-            document.getElementById("Title").innerText = "Nether Calculator";
+            document.getElementById("submit").style.backgroundColor = "rgba(43, 43, 43, 0.897)";
+            document.getElementById("submit").innerText = "Calculate";
+            document.getElementById("submit").style.color = "white";
         }
         document.getElementById("ask").onclick = function()
         {
@@ -52,7 +53,7 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
     body 
     {
-        background-color: rgb(44, 44, 44);
+        background-image: url(portal.gif);
         color: white;
         font-family: 'Poppins', sans-serif;
         margin: 0px 0px 0px 0px;
@@ -111,18 +112,10 @@
         height: 2em;
         padding-left: 0.5em;
         color: rgb(44, 44, 44);  
+        background-color: rgba(255, 255, 255, 0.788);
         transition: color 0.5s, background-color 0.5s;    
     }
-    .x {
-        background-color: rgb(253, 87, 87);
-        
-    }
-    .y {
-        background-color: rgb(60, 215, 143);
-    }
-    .z {
-        background-color: rgb(103, 103, 245);
-    }
+
     .z::placeholder {
         color: rgb(44, 44, 44);
     }
@@ -153,7 +146,7 @@
         border: none;
         margin-left: -0.6em;
         font-family: 'Poppins', sans-serif;
-        background-color: rgba(66, 66, 66, 0.291);
+        background-color: rgba(43, 43, 43, 0.897);
         box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.224);
         transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
         font-size: 20px;
