@@ -33,6 +33,7 @@
             navigator.clipboard.writeText(resultVar);   
             document.getElementById("submit").style.backgroundColor = "rgb(48, 180, 98)";
             document.getElementById("submit").innerHTML = "Copied to Clipboard!";
+            document.getElementById("submit").style.color = "rgb(44, 44, 44)";
             setTimeout(timeout, 1500)
             if (x == 24 && y == "02" & z == 2022)
             {
@@ -115,6 +116,12 @@
         background-color: rgba(255, 255, 255, 0.788);
         transition: color 0.5s, background-color 0.5s;    
     }
+    .x:hover, .y:hover, .z:hover {
+        background-color: white;
+    }
+    .x:focus, .y:focus, .z:focus {
+        background-color: white;
+    }
 
     .z::placeholder {
         color: rgb(44, 44, 44);
@@ -151,12 +158,6 @@
         transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
         font-size: 20px;
         color: white;
-    }
-    .Submit:hover
-    {
-        background-color: rgb(252, 213, 40);
-        border: none;
-        color: rgb(44, 44, 44);
     }
     .name
     {
