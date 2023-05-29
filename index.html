@@ -42,7 +42,7 @@
             }
         }
         function timeout (){
-            document.getElementById("submit").style.backgroundColor = "rgba(43, 43, 43, 0.897)";
+            document.getElementById("submit").style.backgroundColor = "rgb(44, 44, 44)";
             document.getElementById("submit").innerText = "Calculate";
             document.getElementById("submit").style.color = "white";
         }
@@ -75,7 +75,7 @@
     }
     .headf 
     {
-        background-color: rgb(44, 44, 44);
+        background-color: rgb(34, 34, 34);
         transition: background-color 0.5s, color 0.5s;
         margin: 0px;
         display: flex;
@@ -125,11 +125,23 @@
         background-color: rgba(255, 255, 255, 0.788);
         transition: color 0.5s, background-color 0.5s;    
     }
-    .x:hover, .y:hover, .z:hover {
-        background-color: white;
+    .x:hover{
+        background-color: rgb(228, 77, 77);
     }
-    .x:focus, .y:focus, .z:focus {
-        background-color: white;
+    .y:hover{
+        background-color: rgb(77, 228, 158);
+    }
+    .z:hover{
+        background-color: rgb(91, 117, 233);
+    }
+    .x:{
+        background-color: rgb(228, 77, 77);
+    }
+    .y:{
+        background-color: rgb(77, 228, 158);
+    }
+    .z:{
+        background-color: rgb(91, 117, 233);
     }
 
     .z::placeholder {
@@ -162,8 +174,8 @@
         border: none;
         margin-left: -0.6em;
         font-family: 'Poppins', sans-serif;
-        background-color: rgba(43, 43, 43, 0.897);
-        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.224);
+        background-color: rgb(44, 44, 44);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
         transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
         font-size: 20px;
         color: white;
@@ -189,13 +201,13 @@
         justify-content: center;
         align-items: center;
         font-family: 'Poppins', sans-serif;
-        background-color: rgb(252, 213, 40);
+        background-color: rgb(44, 44, 44);
         transition: box-shadow 0.5s, background-color 0.5s;
         font-size: 20px;
-        color: rgb(44, 44, 44);
+        color: rgb(255, 255, 255);
         transition: background-color 0.5s, box-shadow 0.5s, color 0.5s;
         margin-right: .7em;
-        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.224);
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
     }
     .Ask:hover 
     {
