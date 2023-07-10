@@ -32,9 +32,9 @@
             var zRes = z / 8; 
             var resultVar = Math.round(xRes).toString() + " " +  Math.round(yRes).toString() + " " + Math.round(zRes).toString();
             navigator.clipboard.writeText(resultVar);   
-            document.getElementById("submit").style.backgroundColor = "rgb(48, 180, 98)";
+            document.getElementById("submit").style.backgroundColor = "rgb(48, 180, 98, .8)";
             document.getElementById("submit").innerHTML = "Copied to Clipboard!";
-            document.getElementById("submit").style.color = "rgb(44, 44, 44)";
+            document.getElementById("submit").style.color = "rgb(44, 44, 44)"
             setTimeout(timeout, 1500)
             if (x == 24 && y == "02" & z == 2022)
             {
@@ -42,7 +42,7 @@
             }
         }
         function timeout (){
-            document.getElementById("submit").style.backgroundColor = "rgb(44, 44, 44)";
+            document.getElementById("submit").style.backgroundColor = "rgb(44, 44, 44, .8)";
             document.getElementById("submit").innerText = "Calculate";
             document.getElementById("submit").style.color = "white";
         }
@@ -62,11 +62,13 @@
         height: 100%;
         align-items: center;
         background-color: rgb(27, 27, 27);
+        background-image: url("netherbg.png");
     }
     
     .headf 
     {
-        background-color: rgb(34, 34, 34);
+        background-color: rgba(44, 44, 44, 0.8);
+        backdrop-filter: blur(.2em);
         transition: background-color 0.5s, color 0.5s;
         margin: 0px;
         display: flex;
@@ -114,25 +116,26 @@
         padding-left: 0.5em;
         color: rgb(44, 44, 44);  
         background-color: rgba(255, 255, 255, 0.788);
-        transition: color 0.5s, background-color 0.5s;    
+        transition: color 0.5s, background-color 0.5s;  
+        backdrop-filter: blur(.4em);  
     }
     .x:hover{
-        background-color: rgb(228, 77, 77);
+        background-color: rgb(228, 77, 77, .8);
     }
     .y:hover{
-        background-color: rgb(77, 228, 158);
+        background-color: rgb(77, 228, 158, .8);
     }
     .z:hover{
-        background-color: rgb(91, 117, 233);
+        background-color: rgb(91, 117, 233, .8);
     }
     .x:{
-        background-color: rgb(228, 77, 77);
+        background-color: rgb(228, 77, 77, .8);
     }
     .y:{
-        background-color: rgb(77, 228, 158);
+        background-color: rgb(77, 228, 158, .8);
     }
     .z:{
-        background-color: rgb(91, 117, 233);
+        background-color: rgb(91, 117, 233, .8);
     }
 
     .z::placeholder {
@@ -165,11 +168,12 @@
         border: none;
         margin-left: -0.6em;
         font-family: 'Poppins', sans-serif;
-        background-color: rgb(44, 44, 44);
+        background-color: rgba(44, 44, 44, 0.8);
         box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
         transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
         font-size: 20px;
         color: white;
+        backdrop-filter: blur(.2em);
     }
     .name
     {
