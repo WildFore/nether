@@ -118,28 +118,31 @@
         padding-left: 0.5em;
         color: rgb(44, 44, 44);  
         background-color: rgba(255, 255, 255, 0.788);
-        transition: color 0.5s, background-color 0.5s;  
+        transition: color 0.5s, background-color 0.5s, width 0.5s, height 0.5s, margin-left 0.5s, box-shadow 0.5s;  
         backdrop-filter: blur(.4em); 
         -webkit-backdrop-filter: blur(.4em);   
         box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.3);
     }
     .x:hover{
         background-color: rgb(228, 77, 77, .8);
+        width: 16.6em;    
+        height: 1.8em;
+        margin-left:-8px;   
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0);     
     }
     .y:hover{
         background-color: rgb(77, 228, 158, .8);
+        width: 16.6em;    
+        height: 1.8em;
+        margin-left:-8px;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0);   
     }
     .z:hover{
         background-color: rgb(91, 117, 233, .8);
-    }
-    .x:{
-        background-color: rgb(228, 77, 77, .8);
-    }
-    .y:{
-        background-color: rgb(77, 228, 158, .8);
-    }
-    .z:{
-        background-color: rgb(91, 117, 233, .8);
+        width: 16.6em;
+        height: 1.8em;
+        margin-left:-8px;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0);
     }
 
     .z::placeholder {
@@ -174,11 +177,18 @@
         font-family: 'Poppins', sans-serif;
         background-color: rgba(44, 44, 44, 0.8);
         box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
-        transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s;
+        transition: box-shadow 0.5s, background-color 0.5s, color 0.5s, border 0.5s, width 0.5s, height 0.5s, margin-left 0.5s, background-color 0.5s;
         font-size: 20px;
         color: white;
         backdrop-filter: blur(.2em);
         -webkit-backdrop-filter: blur(.2em);
+    }
+    .Submit:hover 
+    {
+        width: 17.5em;
+        height: 2.3em;
+        margin-left: -0.5em;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0);
     }
     .name
     {
