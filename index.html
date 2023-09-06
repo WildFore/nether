@@ -14,6 +14,7 @@
     </header>
     <div class="bg"></div>
     <div class = "Window">
+        <div class = "under"></div>
         <li class="list">
             <ul class = "xxx"><input class = "x" id = "xIn" maxlength="24" placeholder="X:"></input></ul>
             <ul><input class = "y" id = "yIn" maxlength="24" placeholder="Y:"></input></ul>
@@ -64,7 +65,20 @@
         background-color: rgb(27, 27, 27);
         background-image: url("netherbg.png");
     }
-    
+    .under {
+        background-color: rgba(0, 0, 0, 0.295);
+        border-radius: 1em;
+        backdrop-filter: blur(1em);
+        -webkit-backdrop-filter: blur(1em);
+        width: 23.2em;
+        display: flex;
+        margin-left: 1.9em;
+        margin-top: -.7em;
+        height: 15em;
+        position: absolute;
+        z-index: -1;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.5);
+    }
     .headf 
     {
         background-color: rgba(44, 44, 44, 0.8);
@@ -100,6 +114,7 @@
         list-style: none;
         font-size: 26px;
     }
+
     .x, .y, .z
     {
         margin-top: -20px;
@@ -206,6 +221,8 @@
     }
     .Submit:hover 
     {
+        background-color: rgb(255, 187, 0);
+        color: rgba(44, 44, 44, 0.8);
         width: 17.5em;
         height: 2.3em;
         margin-left: -0.5em;
